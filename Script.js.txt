@@ -1,0 +1,31 @@
+let nftCollection = {};
+let nftCounter = 0;
+
+let mintNft = (Name , description) =>{
+    nftCounter++;
+    nft = {
+        id  : nftCounter,
+        name : Name,
+        description : description
+    }
+    nftCollection[nftCounter] = nft;
+}
+
+
+let listNft=()=>{
+
+    for(const id in nftCollection){
+         const nft = nftCollection[id];
+        console.log(`Nft collection is :${nft.id}`);
+        console.log(`Name is : ${nft.name}`);
+        console.log(`Description is : ${nft.description}`);
+}}
+
+let getTotalSupply= () =>{
+    console.log(Object.keys(nft).length);
+}
+
+
+mintNft("Blockchain" , "lorem ipsum dolor sit amet, consectetur adipis lorem ipsum dolor sit amet");
+mintNft("ethereum" , "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet");
+listNft();
